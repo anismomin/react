@@ -1,5 +1,14 @@
-require('./main.css');
+import React from 'react';
+import {render} from 'react-dom';
 
-const name = 'Anis Momin';
+class App extends React.Component {
+	render() {
+		return (
+			<div>
+				<h1>Hello</h1>
+			</div>	
+		);
+	}	
+}
 
-setTimeout(() => alert(`Hello there from ${name}`), 300);
+render(<App/>, window.document.getElementById('app'));
