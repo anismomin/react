@@ -79,11 +79,24 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ className: 'container' },
 					_react2.default.createElement(
-						'h1',
-						null,
-						'Hello'
+						'div',
+						{ className: 'row' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-sm-10 col-sm-offset-1' },
+							_react2.default.createElement(
+								'h1',
+								null,
+								'Hello'
+							),
+							_react2.default.createElement(
+								'button',
+								{ type: 'button', className: 'btn btn-default' },
+								'button'
+							)
+						)
 					)
 				);
 			}
