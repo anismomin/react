@@ -22162,7 +22162,7 @@
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -22193,29 +22193,42 @@
 		}
 	
 		_createClass(Home, [{
-			key: "render",
+			key: 'render',
 			value: function render() {
+				var heading = 'React is awesome!';
+				var para = 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. Learn more';
+	
+				if (true) {
+					heading = 'React is too good!';
+				}
+	
 				return _react2.default.createElement(
-					"div",
-					{ className: "jumbotron" },
+					'div',
+					{ className: 'jumbotron' },
 					_react2.default.createElement(
-						"h1",
+						'h1',
 						null,
-						"React is awesome! ",
-						343434 + 334334
+						' ',
+						heading
 					),
 					_react2.default.createElement(
-						"p",
+						'p',
 						null,
-						"This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. Learn more"
+						para
 					),
 					_react2.default.createElement(
-						"p",
+						'h2',
+						null,
+						' Ternary : 3 == 4 ? ',
+						 false ? 'YES' : 'NO'
+					),
+					_react2.default.createElement(
+						'p',
 						null,
 						_react2.default.createElement(
-							"a",
-							{ className: "btn btn-primary btn-lg", href: "#", role: "button" },
-							"Learn more"
+							'a',
+							{ className: 'btn btn-primary btn-lg', href: '#', role: 'button' },
+							'Learn more'
 						)
 					)
 				);

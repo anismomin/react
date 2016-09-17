@@ -2,10 +2,15 @@ import React from 'react';
 import {render} from 'react-dom';
 
 import { Header } from './components/Header';
+import { Banner } from './components/Banner';
 import { Home } from './components/Home';
 
 class App extends React.Component {
 	render() {
+		var obj = {
+			name: 'anis',
+			hobbies: ['learning', 'surfing', 'exploring', 'working', 'earning']
+		};
 		return (
 			<div className="container">
 				<div className="row">
@@ -15,7 +20,13 @@ class App extends React.Component {
 				</div>
 				<div className="row">
 					<div className="col-sm-10 col-sm-offset-1">
-						<Home/>
+						<Banner/>
+					</div>	
+				</div>
+
+				<div className="row">
+					<div className="col-sm-10 col-sm-offset-1">
+						<Home name={"anis"} age={29} obj={obj} />
 					</div>	
 				</div>
 			</div>
