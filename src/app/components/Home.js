@@ -18,3 +18,9 @@ export class Home extends React.Component {
 		);
 	}
 }
+
+Home.PropTypes = {
+	name: React.PropTypes.string,
+	age: React.PropTypes.number,
+	obj: React.PropTypes.object,
+};

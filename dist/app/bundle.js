@@ -59,7 +59,9 @@
 	
 	var _Header = __webpack_require__(/*! ./components/Header */ 172);
 	
-	var _Home = __webpack_require__(/*! ./components/Home */ 173);
+	var _Banner = __webpack_require__(/*! ./components/Banner */ 173);
+	
+	var _Home = __webpack_require__(/*! ./components/Home */ 174);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -81,6 +83,10 @@
 		_createClass(App, [{
 			key: 'render',
 			value: function render() {
+				var obj = {
+					name: 'anis',
+					hobbies: ['learning', 'surfing', 'exploring', 'working', 'earning']
+				};
 				return _react2.default.createElement(
 					'div',
 					{ className: 'container' },
@@ -99,7 +105,16 @@
 						_react2.default.createElement(
 							'div',
 							{ className: 'col-sm-10 col-sm-offset-1' },
-							_react2.default.createElement(_Home.Home, null)
+							_react2.default.createElement(_Banner.Banner, null)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'row' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-sm-10 col-sm-offset-1' },
+							_react2.default.createElement(_Home.Home, { name: "anis", age: 29, obj: obj })
 						)
 					)
 				);
@@ -22157,6 +22172,89 @@
 
 /***/ },
 /* 173 */
+/*!**************************************!*\
+  !*** ./src/app/components/Banner.js ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.Banner = undefined;
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Banner = exports.Banner = function (_React$Component) {
+		_inherits(Banner, _React$Component);
+	
+		function Banner() {
+			_classCallCheck(this, Banner);
+	
+			return _possibleConstructorReturn(this, (Banner.__proto__ || Object.getPrototypeOf(Banner)).apply(this, arguments));
+		}
+	
+		_createClass(Banner, [{
+			key: 'render',
+			value: function render() {
+				var heading = 'React is awesome!';
+				var para = 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. Learn more';
+	
+				if (true) {
+					heading = 'React is too good!';
+				}
+	
+				return _react2.default.createElement(
+					'div',
+					{ className: 'jumbotron' },
+					_react2.default.createElement(
+						'h1',
+						null,
+						' ',
+						heading
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						para
+					),
+					_react2.default.createElement(
+						'h2',
+						null,
+						' Ternary : 3 == 4 ? ',
+						 false ? 'YES' : 'NO'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						_react2.default.createElement(
+							'a',
+							{ className: 'btn btn-primary btn-lg', href: '#', role: 'button' },
+							'Learn more'
+						)
+					)
+				);
+			}
+		}]);
+	
+		return Banner;
+	}(_react2.default.Component);
+
+/***/ },
+/* 174 */
 /*!************************************!*\
   !*** ./src/app/components/Home.js ***!
   \************************************/
@@ -22195,40 +22293,43 @@
 		_createClass(Home, [{
 			key: 'render',
 			value: function render() {
-				var heading = 'React is awesome!';
-				var para = 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information. Learn more';
-	
-				if (true) {
-					heading = 'React is too good!';
-				}
 	
 				return _react2.default.createElement(
 					'div',
-					{ className: 'jumbotron' },
-					_react2.default.createElement(
-						'h1',
-						null,
-						' ',
-						heading
-					),
-					_react2.default.createElement(
-						'p',
-						null,
-						para
-					),
+					null,
 					_react2.default.createElement(
 						'h2',
 						null,
-						' Ternary : 3 == 4 ? ',
-						 false ? 'YES' : 'NO'
+						'Hello i am  ',
+						this.props.name,
+						' and my age is ',
+						this.props.age,
+						' '
 					),
 					_react2.default.createElement(
-						'p',
+						'div',
 						null,
 						_react2.default.createElement(
-							'a',
-							{ className: 'btn btn-primary btn-lg', href: '#', role: 'button' },
-							'Learn more'
+							'h4',
+							null,
+							'My Hobbies are: '
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'name Obj: ',
+							this.props.obj.name
+						),
+						_react2.default.createElement(
+							'ul',
+							null,
+							this.props.obj.hobbies.map(function (hobby, i) {
+								return _react2.default.createElement(
+									'li',
+									{ key: i },
+									hobby
+								);
+							})
 						)
 					)
 				);
