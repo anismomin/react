@@ -111,7 +111,7 @@
 						_react2.default.createElement(
 							'div',
 							{ className: 'col-sm-10 col-sm-offset-1' },
-							_react2.default.createElement(_Home.Home, { name: "anis", age: 29 })
+							_react2.default.createElement(_Home.Home, { name: "anis", initAge: 29 })
 						)
 					)
 				);
