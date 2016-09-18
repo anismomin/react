@@ -61,7 +61,7 @@
 	
 	var _Banner = __webpack_require__(/*! ./components/Banner */ 173);
 	
-	var _Home = __webpack_require__(/*! ./components/Home */ 174);
+	var _Home = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/Home\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -83,10 +83,7 @@
 		_createClass(App, [{
 			key: 'render',
 			value: function render() {
-				var obj = {
-					name: 'anis',
-					hobbies: ['learning', 'surfing', 'exploring', 'working', 'earning']
-				};
+	
 				return _react2.default.createElement(
 					'div',
 					{ className: 'container' },
@@ -114,7 +111,7 @@
 						_react2.default.createElement(
 							'div',
 							{ className: 'col-sm-10 col-sm-offset-1' },
-							_react2.default.createElement(_Home.Home, { name: "anis", age: "29", obj: obj })
+							_react2.default.createElement(_Home.Home, { name: "anis", age: 29 })
 						)
 					)
 				);
@@ -22252,101 +22249,6 @@
 	
 		return Banner;
 	}(_react2.default.Component);
-
-/***/ },
-/* 174 */
-/*!************************************!*\
-  !*** ./src/app/components/Home.js ***!
-  \************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	exports.Home = undefined;
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Home = exports.Home = function (_React$Component) {
-		_inherits(Home, _React$Component);
-	
-		function Home() {
-			_classCallCheck(this, Home);
-	
-			return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
-		}
-	
-		_createClass(Home, [{
-			key: 'render',
-			value: function render() {
-	
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'h2',
-						null,
-						'Hello i am  ',
-						this.props.name,
-						' and my age is ',
-						this.props.age,
-						' '
-					),
-					_react2.default.createElement(
-						'div',
-						null,
-						_react2.default.createElement(
-							'h4',
-							null,
-							'My Hobbies are: '
-						),
-						_react2.default.createElement(
-							'p',
-							null,
-							'name Obj: ',
-							this.props.obj.name
-						),
-						_react2.default.createElement(
-							'ul',
-							null,
-							this.props.obj.hobbies.map(function (hobby, i) {
-								return _react2.default.createElement(
-									'li',
-									{ key: i },
-									hobby
-								);
-							})
-						)
-					),
-					_react2.default.createElement('hr', null),
-					this.props.children
-				);
-			}
-		}]);
-	
-		return Home;
-	}(_react2.default.Component);
-	
-	Home.PropTypes = {
-		name: _react2.default.PropTypes.string,
-		age: _react2.default.PropTypes.number,
-		obj: _react2.default.PropTypes.object,
-		children: _react2.default.PropTypes.element.isRequired
-	};
 
 /***/ }
 /******/ ]);
