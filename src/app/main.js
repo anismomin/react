@@ -26,7 +26,10 @@ class App extends React.Component {
 
 				<div className="row">
 					<div className="col-sm-10 col-sm-offset-1">
-						<Home name={"anis"} age={"29"} obj={obj} />
+						<Home name={"anis"} age={"29"} obj={obj}>
+							<h1> How To use Children keyword ?</h1>
+							<p>Data send and access with children key word !</p>
+						</Home>
 					</div>	
 				</div>
 			</div>

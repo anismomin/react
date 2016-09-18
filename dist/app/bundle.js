@@ -114,7 +114,7 @@
 						_react2.default.createElement(
 							'div',
 							{ className: 'col-sm-10 col-sm-offset-1' },
-							_react2.default.createElement(_Home.Home, { name: "anis", age: 29, obj: obj })
+							_react2.default.createElement(_Home.Home, { name: "anis", age: "29", obj: obj })
 						)
 					)
 				);
@@ -22331,13 +22331,22 @@
 								);
 							})
 						)
-					)
+					),
+					_react2.default.createElement('hr', null),
+					this.props.children
 				);
 			}
 		}]);
 	
 		return Home;
 	}(_react2.default.Component);
+	
+	Home.PropTypes = {
+		name: _react2.default.PropTypes.string,
+		age: _react2.default.PropTypes.number,
+		obj: _react2.default.PropTypes.object,
+		children: _react2.default.PropTypes.element.isRequired
+	};
 
 /***/ }
 /******/ ]);
